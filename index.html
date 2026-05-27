@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sophrosport | Fasting & Hormonal Alignment Coach</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --base-dark: #1E2229;
+            --sophro-coral: #E27D60;
+            --sophro-teal: #41B3A3;
+            --bg-light: #FAFAFA;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--base-dark);
+            background-color: var(--white);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--sophro-coral);
+        }
+
+        .nav-btn {
+            background-color: var(--base-dark);
+            color: var(--white);
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+
+        .nav-btn:hover {
+            background-color: var(--sophro-coral);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 5%;
+            background: linear-gradient(135deg, #fdfbf7 0%, #f5f0e6 100%);
+            text-align: center;
+        }
+
+        .hero-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: rgba(65, 179, 163, 0.1);
+            color: var(--sophro-teal);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        h1 em {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 35px;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background-color: var(--sophro-coral);
+            color: var(--white);
+            padding: 16px 32px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(226, 125, 96, 0.3);
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .cta-btn:hover {
+            background-color: #d46b4e;
+            transform: translateY(-2px);
+        }
+
+        /* About / Philosophy Section */
+        .philosophy {
+            padding: 80px 5%;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .philosophy p {
+            font-size: 1.1rem;
+            color: #444;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        /* Pillars Framework Section */
+        .pillars-section {
+            background-color: var(--bg-light);
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 40px auto 0 auto;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            transition: transform 0.3s, border-color 0.3s;
+            border: 2px solid transparent;
+            text-align: left;
+        }
+
+        .card.active {
+            border-color: var(--sophro-coral);
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: var(--sophro-teal);
+        }
+
+        .icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--base-dark);
+            color: #999;
+            padding: 40px 5%;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        .disclaimer {
+            font-size: 0.75rem;
+            max-width: 700px;
+            margin: 20px auto 0 auto;
+            line-height: 1.4;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            h2 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">SOPHRO<span>SPORT</span></div>
+        <a href="#" class="nav-btn">Book a Call</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-container">
+            <span class="badge">Licensed Fast Like a Girl Coach</span>
+            <h1>Master the Art of Fasting for <em>Female Vitality</em></h1>
+            <p>True physical and mental excellence doesn't come from pushing through physical burnout. Sync your nutrition, lifestyle, and fasting protocols to your unique hormonal cycles to unlock unshakeable energy.</p>
+            <a href="#" class="cta-btn">Align Your Cycle</a>
+        </div>
+    </section>
+
+    <section class="philosophy">
+        <h2>The Sophrosport Philosophy</h2>
+        <p>For decades, the fitness and wellness worlds have pushed a rigid, one-size-fits-all approach. Women were taught to train and fast like men—ignoring their cycles, pushing past exhaustion, and suffering from hormonal disruption as a result.</p>
+        <p>Named after the ancient concept of <strong>Sophrosyne</strong>—the practice of deep harmony, soundness of mind, and excellence of body—Sophrosport is built to break that cycle. By layering the clinical, cycle-syncing framework of Dr. Mindy Pelz over holistic lifestyle strategies, I help you turn your biology into your superpower.</p>
+    </section>
+
+    <section class="pillars-section">
+        <h2>The Core Framework</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="icon">🩸</div>
+                <h3>Cycle-Synced Fasting</h3>
+                <p>We break down your month into distinct hormonal phases, mapping precise fasting windows to protect your estrogen, testosterone, and progesterone levels dynamically.</p>
+            </div>
+            <div class="card active">
+                <div class="icon">⚡</div>
+                <h3>Metabolic Flexibility</h3>
+                <p>Train your cells to switch seamlessly between sugar-burning and fat-burning states. Say goodbye to energy crashes and stubborn metabolic plateaus.</p>
+            </div>
+            <div class="card">
+                <div class="icon">🌱</div>
+                <h3>Life Stage Customization</h3>
+                <p>No cycle? Whether navigating perimenopause or entering post-menopause, we customize specialized fasting protocols to alleviate brain fog and support your current biology.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Sophrosport Coaching. All Rights Reserved.</p>
+        <p class="disclaimer">Disclaimer: I am a certified fasting coach trained in the principles of Dr. Mindy Pelz. I am not a medical doctor. The information provided on this website is for educational purposes and does not replace professional medical advice, diagnosis, or treatment.</p>
+    </footer>
+
+</body>
+</html>
