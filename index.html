@@ -98,6 +98,10 @@
             gap: 28px;
         }
 
+        nav a {
+            white-space: nowrap;
+        }
+
         nav a:not(.nav-btn) {
             text-decoration: none;
             font-size: 0.95rem;
@@ -536,6 +540,68 @@
 
         .steps p { color: #666; }
 
+        /* Programmes */
+        .programmes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .programme {
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            padding: 36px 32px;
+            display: flex;
+            flex-direction: column;
+            border-top: 4px solid var(--sophro-coral);
+        }
+
+        .programme.players { border-top-color: var(--sophro-teal); }
+
+        .programme .audience {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--sophro-coral-dark);
+            margin-bottom: 10px;
+        }
+
+        .programme.players .audience { color: var(--sophro-teal-dark); }
+
+        .programme h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            line-height: 1.25;
+            margin-bottom: 14px;
+        }
+
+        .programme p { color: #555; }
+
+        .programme .meta {
+            margin: 18px 0 26px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--base-dark);
+        }
+
+        .programme .cta-btn {
+            margin-top: auto;
+            align-self: flex-start;
+            font-size: 0.95rem;
+            padding: 12px 24px;
+        }
+
+        .programmes-note {
+            text-align: center;
+            margin-top: 32px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
         /* FAQ */
         .faq {
             max-width: 780px;
@@ -637,7 +703,7 @@
             .js .reveal { opacity: 1; transform: none; }
         }
 
-        @media (max-width: 860px) {
+        @media (max-width: 1100px) {
             .menu-toggle { display: block; }
 
             nav {
@@ -691,6 +757,7 @@
             <a href="#framework">Framework</a>
             <a href="#cycle">Your Cycle</a>
             <a href="#how">How It Works</a>
+            <a href="#programmes">Programmes</a>
             <a href="#faq">FAQ</a>
             <a href="#contact" class="nav-btn">Get in Touch</a>
         </nav>
@@ -847,7 +914,35 @@
             </div>
         </section>
 
-        <section class="section alt" id="faq">
+        <section class="section alt" id="programmes">
+            <div class="section-inner">
+                <div class="section-head reveal">
+                    <span class="eyebrow">Programmes</span>
+                    <h2>Learn With SophroSport</h2>
+                </div>
+                <div class="programmes">
+                    <article class="programme reveal">
+                        <span class="audience">For coaches</span>
+                        <h3>SophroSport Certification</h3>
+                        <p>The full 12-module certification programme. Lifetime access, all guided audio, the participant workbook, and the coach’s toolkit.</p>
+                        <p class="meta">12 modules · Lifetime access</p>
+                        <!-- Placeholder: replace href with the programme page once the new platform is live -->
+                        <a href="mailto:contact@sophrology.coach?subject=SophroSport%20Certification%20Enquiry" class="cta-btn">Explore the programme</a>
+                    </article>
+                    <article class="programme players reveal">
+                        <span class="audience">For players</span>
+                        <h3>Tennis Foundations</h3>
+                        <p>A self-paced introduction to the mental game for tennis — breath, focus, and the between-points reset, built for players.</p>
+                        <p class="meta">Online · Lifetime access</p>
+                        <!-- Placeholder: replace href with the programme page once the new platform is live -->
+                        <a href="mailto:contact@sophrology.coach?subject=Tennis%20Foundations%20Enquiry" class="cta-btn ghost">Explore the programme</a>
+                    </article>
+                </div>
+                <p class="programmes-note reveal">Programmes are moving to a new home. Email me and I’ll let you know as soon as enrolment opens.</p>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
             <div class="section-inner">
                 <div class="section-head reveal">
                     <span class="eyebrow">Questions</span>
